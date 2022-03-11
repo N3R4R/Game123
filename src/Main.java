@@ -10,8 +10,8 @@ public class Main {
         int count;
 
         while (true) {
-            System.out.format("У игрока %d слотов с оружием,"
-                            + " введите номер, чтобы выстрелить,"
+            System.out.format("У игрока %d ячеек с оружием,"
+                            + " введите номер ячейки, чтобы выстрелить,"
                             + " -1 чтобы выйти%n",
                     player.getSlotsCount()
             );
@@ -22,13 +22,13 @@ public class Main {
             if (slot < count && slot >= 0){
                 player.shotWithWeapon(slot);
             }else {
-                System.out.println("В этом слоте нет оружия");
+                System.out.println("В ячейке нет оружия");
             }
             if (slot == -1){
                 break;
             }
         }
-        System.out.println("Game over!");
+        System.out.println("GG");
     }
 }
 
@@ -37,9 +37,10 @@ class Player {
 
     public Player() {
         weaponSlots = new Weapon[] {
-                // TODO заполнить слоты оружием
                 new Kirka(),
                 new Pistol(),
+                new AutoGun(),
+
 
         };
     }
