@@ -39,6 +39,7 @@ class Player {
         weaponSlots = new Weapon[] {
                 // TODO заполнить слоты оружием
                 new Kirka(),
+                new Pistol(),
 
         };
     }
